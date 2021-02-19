@@ -5,6 +5,8 @@ import Header from '../../components/Header';
 import Heading from '../../components/Heading';
 import Title from '../../components/Title';
 import CategoryList from '../../components/CategoryList';
+import StreamList from '../../components/StreamList';
+import ChannelList from '../../components/ChannelList';
 
 import { Container, Main, Wrapper } from './styles';
 
@@ -34,7 +36,7 @@ const Following: React.FC = () => {
         render: () => <Title>Live Channels</Title>,
         isTitle: true,
       },
-      { key: 'C2', render: () => <View /> },
+      { key: 'C2', render: () => <StreamList /> },
 
       
       {
@@ -42,7 +44,7 @@ const Following: React.FC = () => {
         render: () => <Title>Continue Watching</Title>,
         isTitle: true,
       },
-      { key: 'C3', render: () => <View /> },
+      { key: 'C3', render: () => <StreamList /> },
 
       
       {
@@ -50,7 +52,7 @@ const Following: React.FC = () => {
         render: () => <Title>Offline Channels</Title>,
         isTitle: true,
       },
-      { key: 'C4', render: () => <View /> }
+      { key: 'C4', render: () => <ChannelList /> }
     ];
 
     // Array que contem apenas os indices dos elementos que são titulos
