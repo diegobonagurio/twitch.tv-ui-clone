@@ -2,4 +2,4 @@
 Programming the UI Clone App Twitch.tv in React Native ⚛️
 
 
-![](images/twitchtv.png)
+![](src/images/twitchtv.png)
