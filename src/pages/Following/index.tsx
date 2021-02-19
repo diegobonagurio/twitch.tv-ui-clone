@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
-import { Text, View, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import Header from '../../components/Header';
 import Heading from '../../components/Heading';
 import Title from '../../components/Title';
 import CategoryList from '../../components/CategoryList';
 import StreamList from '../../components/StreamList';
 import ChannelList from '../../components/ChannelList';
+import {Context} from '../../context/darkTheme';
 
 import { Container, Main, Wrapper } from './styles';
 
@@ -17,6 +18,7 @@ interface Item {
 }
 
 const Following: React.FC = () => {
+  const {dark} = useContext(Context);
   const { data, indices } = React.useMemo(() => {
     const items: Item[] = [
       {
@@ -68,7 +70,7 @@ const Following: React.FC = () => {
 
 
   return (
-    <Wrapper>
+    <Wrapper bgColor={dark}>
       <Container>
         <Header />
         <Main>

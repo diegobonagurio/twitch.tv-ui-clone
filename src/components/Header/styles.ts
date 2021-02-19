@@ -1,13 +1,18 @@
 import styled from 'styled-components/native';
 import colors from '../../styles/colors';
 
-export const Container = styled.View`
+interface Props {
+  bgColor: Boolean;
+}
+
+export const Container = styled.View<Props>`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   padding-top:  14px;
   padding-right: 14px;
+  background: ${({bgColor}) => bgColor ? '#FFF' : '#000'};
 `;
 
 export const Avatar  = styled.TouchableOpacity`
